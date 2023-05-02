@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    /* background-image: linear-gradient(to bottom right, rgb(45, 124, 183), rgb(134, 72, 173)); */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    padding: 25px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid grey;
+    margin-top: 0px;
+}
+.container{
+    background-color: white;
+    width: 40vw;
+    height: 45vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 13px;
+}
+
+form{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Email{
+    padding-top: 10px;
+
+}
+#email{
+    color: green;
+    font-size: 25px;
+    margin-top: 18px;
+}
+
+#password{
+    color: green;
+    font-size: 25px;
+}
+#signInBtn{
+    padding: 10px;
+    margin: 0px auto;
+    width: 60%;
+    height: 30%;
+    border: 2px solid white;
+    background-color: rgb(38, 145, 217);
+    border-radius: 30px;
+    color: white;
+    
+}
+.textbox{
+    margin: auto;
+    margin-top: 5px;
+    width: 80%;
+    height: 5vh;
+    margin-bottom: 45px;
+    
+}
+
+input{
+    border: 2px solid white;
+    border-bottom: 3px solid grey;
+    /* border-radius: 15px; */
+    margin-top: 10px;
+}
+label{
+    color: grey;
+    font-size: 30px;
+    padding-left: 3px;
+}
+.dropDown{
+    width: 99%;
+    height: 16%;
+    margin: auto;
+    padding: 3px
+}

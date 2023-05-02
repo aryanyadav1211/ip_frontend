@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import {Routes, Route, useNavigate} from 'react-router-dom';
+import Login from './login.js';
+import ManageIP from './manageIP.js';
+import { useEffect } from 'react';
 
-function App() {
+export default function App() {
+  // const navigate = useNavigate();
+
+  // const navigateToIp = () => {
+  //   // 👇️ navigate to /contacts
+  //   navigate('/ipmanager');
+  // };
+
+  // const navigateLogin = () => {
+  //   // 👇️ navigate to /
+  //   navigate('/');
+  // };
+
+  // useEffect(()=>{
+  //   navigateLogin()
+  // })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        {/* <button onClick={navigateLogin}>Login</button>
+        {/* <hr /> */}
+        {/* <Login/> */}
+        {/* <button onClick={navigateToIp}>IpManager</button> */} 
+
+        <Routes>
+          <Route path="/contact" element={<ManageIP/>} />
+          <Route path="/" element={<Login />} />
+        </Routes>
+      </div>
     </div>
   );
 }
 
-export default App;
+// function Home() {
+//   return <h2>Home</h2>;
+// }
+
+// function Contacts() {
+//   return <h2>Contacts</h2>;
+// }
+// function demo() {
+//   const navigate = useNavigate();
+
+//   const navigateToIp = () => {
+//     // 👇️ navigate to /contacts
+//     navigate('/ipmanager');
+//   }
+
+// function handleLoginSubmit(){
+
+//   if(1)
+//   {
+//     navigateToIp();
+//   }
+// } 
