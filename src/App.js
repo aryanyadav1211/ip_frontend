@@ -1,61 +1,27 @@
-import {Routes, Route, useNavigate} from 'react-router-dom';
-import Login from './login.js';
-import ManageIP from './manageIP.js';
-import { useEffect } from 'react';
+import { Routes, Route, useNavigate } from "react-router-dom";
+import Login from "./components/login.js";
+import ManageIP from "./components/manageIP.js";
+import { useEffect, useState } from "react";
 
 export default function App() {
-  // const navigate = useNavigate();
-
-  // const navigateToIp = () => {
-  //   // 👇️ navigate to /contacts
-  //   navigate('/ipmanager');
-  // };
-
-  // const navigateLogin = () => {
-  //   // 👇️ navigate to /
-  //   navigate('/');
-  // };
-
-  // useEffect(()=>{
-  //   navigateLogin()
-  // })
-
+  const [bool, setBool] = useState(false);
+  function func() {
+    setBool((curr) => !curr);
+  }
   return (
     <div>
       <div>
-        {/* <button onClick={navigateLogin}>Login</button>
-        {/* <hr /> */}
-        {/* <Login/> */}
-        {/* <button onClick={navigateToIp}>IpManager</button> */} 
-
         <Routes>
-          <Route path="/contact" element={<ManageIP/>} />
-          <Route path="/" element={<Login />} />
+          <Route
+            path="/"
+            element={<Login bool={bool} setBool={setBool} func={func} />}
+          />
+          <Route
+            path="/ipmanager"
+            element={<ManageIP bool={bool} setBool={setBool} />}
+          />
         </Routes>
       </div>
     </div>
   );
 }
-
-// function Home() {
-//   return <h2>Home</h2>;
-// }
-
-// function Contacts() {
-//   return <h2>Contacts</h2>;
-// }
-// function demo() {
-//   const navigate = useNavigate();
-
-//   const navigateToIp = () => {
-//     // 👇️ navigate to /contacts
-//     navigate('/ipmanager');
-//   }
-
-// function handleLoginSubmit(){
-
-//   if(1)
-//   {
-//     navigateToIp();
-//   }
-// } 
