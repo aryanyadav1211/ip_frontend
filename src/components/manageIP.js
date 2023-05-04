@@ -74,7 +74,7 @@ function ManageIP() {
       <h1 id="signInHeading"> Add Your IP</h1>
 
       <form action="" id="form">
-        <label for="name" className="Email">
+        <label  className="Email">
           Enter IP to Access Database
         </label>
         <br />

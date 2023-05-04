@@ -41,6 +41,10 @@ form {
   color: green;
   font-size: 25px;
 }
+.submitButton{
+  width: 15vw;
+  margin: auto;
+}
 label {
   color: grey;
   font-size: 30px;
