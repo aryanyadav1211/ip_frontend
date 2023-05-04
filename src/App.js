@@ -1,7 +1,7 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
-import Login from "./components/login.js";
-import ManageIP from "./components/manageIP.js";
-import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import Login from "./components/LoginPage.js";
+import ManageIP from "./components/ManageIP.js";
+import { useState } from "react";
 
 export default function App() {
   const [bool, setBool] = useState(false);

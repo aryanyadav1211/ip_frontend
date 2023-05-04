@@ -1,19 +1,19 @@
 import React, { useEffect } from "react";
 import { Button, Space, Input } from "antd";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleState, setZero, setOne } from "../actions/index";
 
 function Login(props) {
   const { bool, setBool } = props;
   const navigate = useNavigate();
   const [passwordVisible, setPasswordVisible] = React.useState(false);
-
-  useEffect(() => {
-    if (bool) {
-      navigate("/ipmanager");
-    } else {
-    }
-  });
-
+  const myState = useSelector((state) => state.changeTheNumber);
+  const dispatch = useDispatch();
+  
+  async function changestate() {
+    await dispatch(setOne());
+  }
   async function handleLoginSubmit() {
     let inputedEmail = document.getElementById("email1").value;
     let inputedPassword = document.getElementById("password1").value;
@@ -46,12 +46,10 @@ function Login(props) {
 
         localStorage.setItem("username", userName);
         if (response) {
-          if (!bool) {
-            setBool(true);
+          if (!myState) {
+            changestate();
           }
           navigate("/ipmanager");
-        } else {
-          alert("You are not a registered member");
         }
       }
     } else {
